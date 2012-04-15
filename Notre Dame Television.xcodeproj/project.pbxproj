@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C666D1CA153B2FE800C339CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C666D1C9153B2FE800C339CE /* UIKit.framework */; };
+		C666D1CC153B2FE800C339CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C666D1CB153B2FE800C339CE /* Foundation.framework */; };
+		C666D1CE153B2FE800C339CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C666D1CD153B2FE800C339CE /* CoreGraphics.framework */; };
+		C666D1D4153B2FE800C339CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C666D1D2153B2FE800C339CE /* InfoPlist.strings */; };
+		C666D1D6153B2FE800C339CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C666D1D5153B2FE800C339CE /* main.m */; };
+		C666D1DA153B2FE800C339CE /* NDTVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C666D1D9153B2FE800C339CE /* NDTVAppDelegate.m */; };
+		C666D1DD153B2FE800C339CE /* NDTVFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C666D1DC153B2FE800C339CE /* NDTVFirstViewController.m */; };
+		C666D1DF153B2FE800C339CE /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = C666D1DE153B2FE800C339CE /* first.png */; };
+		C666D1E1153B2FE800C339CE /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C666D1E0153B2FE800C339CE /* first@2x.png */; };
+		C666D1E4153B2FE800C339CE /* NDTVSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C666D1E3153B2FE800C339CE /* NDTVSecondViewController.m */; };
+		C666D1E6153B2FE800C339CE /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = C666D1E5153B2FE800C339CE /* second.png */; };
+		C666D1E8153B2FE800C339CE /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C666D1E7153B2FE800C339CE /* second@2x.png */; };
+		C666D1EB153B2FE800C339CE /* NDTVFirstViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = C666D1E9153B2FE800C339CE /* NDTVFirstViewController_iPhone.xib */; };
+		C666D1EE153B2FE800C339CE /* NDTVFirstViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C666D1EC153B2FE800C339CE /* NDTVFirstViewController_iPad.xib */; };
+		C666D1F1153B2FE800C339CE /* NDTVSecondViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = C666D1EF153B2FE800C339CE /* NDTVSecondViewController_iPhone.xib */; };
+		C666D1F4153B2FE800C339CE /* NDTVSecondViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C666D1F2153B2FE800C339CE /* NDTVSecondViewController_iPad.xib */; };
+		C666D1FC153B2FE800C339CE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C666D1FB153B2FE800C339CE /* SenTestingKit.framework */; };
+		C666D1FD153B2FE800C339CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C666D1C9153B2FE800C339CE /* UIKit.framework */; };
+		C666D1FE153B2FE800C339CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C666D1CB153B2FE800C339CE /* Foundation.framework */; };
+		C666D206153B2FE900C339CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C666D204153B2FE900C339CE /* InfoPlist.strings */; };
+		C666D209153B2FE900C339CE /* Notre_Dame_TelevisionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C666D208153B2FE900C339CE /* Notre_Dame_TelevisionTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C666D1FF153B2FE800C339CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C666D1BC153B2FE800C339CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C666D1C4153B2FE800C339CE;
+			remoteInfo = "Notre Dame Television";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C666D1C5153B2FE800C339CE /* Notre Dame Television.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Notre Dame Television.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C666D1C9153B2FE800C339CE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C666D1CB153B2FE800C339CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C666D1CD153B2FE800C339CE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C666D1D1153B2FE800C339CE /* Notre Dame Television-Info.plist */ = {isa = PBXFileReference; path = "Notre Dame Television-Info.plist"; sourceTree = "<group>"; };
+		C666D1D3153B2FE800C339CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C666D1D5153B2FE800C339CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C666D1D7153B2FE800C339CE /* Notre Dame Television-Prefix.pch */ = {isa = PBXFileReference; path = "Notre Dame Television-Prefix.pch"; sourceTree = "<group>"; };
+		C666D1D8153B2FE800C339CE /* NDTVAppDelegate.h */ = {isa = PBXFileReference; path = NDTVAppDelegate.h; sourceTree = "<group>"; };
+		C666D1D9153B2FE800C339CE /* NDTVAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDTVAppDelegate.m; sourceTree = "<group>"; };
+		C666D1DB153B2FE800C339CE /* NDTVFirstViewController.h */ = {isa = PBXFileReference; path = NDTVFirstViewController.h; sourceTree = "<group>"; };
+		C666D1DC153B2FE800C339CE /* NDTVFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDTVFirstViewController.m; sourceTree = "<group>"; };
+		C666D1DE153B2FE800C339CE /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		C666D1E0153B2FE800C339CE /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		C666D1E2153B2FE800C339CE /* NDTVSecondViewController.h */ = {isa = PBXFileReference; path = NDTVSecondViewController.h; sourceTree = "<group>"; };
+		C666D1E3153B2FE800C339CE /* NDTVSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDTVSecondViewController.m; sourceTree = "<group>"; };
+		C666D1E5153B2FE800C339CE /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		C666D1E7153B2FE800C339CE /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		C666D1EA153B2FE800C339CE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NDTVFirstViewController_iPhone.xib; sourceTree = "<group>"; };
+		C666D1ED153B2FE800C339CE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NDTVFirstViewController_iPad.xib; sourceTree = "<group>"; };
+		C666D1F0153B2FE800C339CE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NDTVSecondViewController_iPhone.xib; sourceTree = "<group>"; };
+		C666D1F3153B2FE800C339CE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NDTVSecondViewController_iPad.xib; sourceTree = "<group>"; };
+		C666D1FA153B2FE800C339CE /* Notre Dame TelevisionTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Notre Dame TelevisionTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C666D1FB153B2FE800C339CE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		C666D203153B2FE900C339CE /* Notre Dame TelevisionTests-Info.plist */ = {isa = PBXFileReference; path = "Notre Dame TelevisionTests-Info.plist"; sourceTree = "<group>"; };
+		C666D205153B2FE900C339CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C666D207153B2FE900C339CE /* Notre_Dame_TelevisionTests.h */ = {isa = PBXFileReference; path = Notre_Dame_TelevisionTests.h; sourceTree = "<group>"; };
+		C666D208153B2FE900C339CE /* Notre_Dame_TelevisionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Notre_Dame_TelevisionTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C666D1C2153B2FE800C339CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C666D1CA153B2FE800C339CE /* UIKit.framework in Frameworks */,
+				C666D1CC153B2FE800C339CE /* Foundation.framework in Frameworks */,
+				C666D1CE153B2FE800C339CE /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C666D1F6153B2FE800C339CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C666D1FC153B2FE800C339CE /* SenTestingKit.framework in Frameworks */,
+				C666D1FD153B2FE800C339CE /* UIKit.framework in Frameworks */,
+				C666D1FE153B2FE800C339CE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C666D1BA153B2FE800C339CE = {
+			isa = PBXGroup;
+			children = (
+				C666D1CF153B2FE800C339CE /* Notre Dame Television */,
+				C666D201153B2FE800C339CE /* Notre Dame TelevisionTests */,
+				C666D1C8153B2FE800C339CE /* Frameworks */,
+				C666D1C6153B2FE800C339CE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C666D1C6153B2FE800C339CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C666D1C5153B2FE800C339CE /* Notre Dame Television.app */,
+				C666D1FA153B2FE800C339CE /* Notre Dame TelevisionTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C666D1C8153B2FE800C339CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C666D1C9153B2FE800C339CE /* UIKit.framework */,
+				C666D1CB153B2FE800C339CE /* Foundation.framework */,
+				C666D1CD153B2FE800C339CE /* CoreGraphics.framework */,
+				C666D1FB153B2FE800C339CE /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C666D1CF153B2FE800C339CE /* Notre Dame Television */ = {
+			isa = PBXGroup;
+			children = (
+				C666D1D8153B2FE800C339CE /* NDTVAppDelegate.h */,
+				C666D1D9153B2FE800C339CE /* NDTVAppDelegate.m */,
+				C666D1DB153B2FE800C339CE /* NDTVFirstViewController.h */,
+				C666D1DC153B2FE800C339CE /* NDTVFirstViewController.m */,
+				C666D1DE153B2FE800C339CE /* first.png */,
+				C666D1E0153B2FE800C339CE /* first@2x.png */,
+				C666D1E2153B2FE800C339CE /* NDTVSecondViewController.h */,
+				C666D1E3153B2FE800C339CE /* NDTVSecondViewController.m */,
+				C666D1E5153B2FE800C339CE /* second.png */,
+				C666D1E7153B2FE800C339CE /* second@2x.png */,
+				C666D1E9153B2FE800C339CE /* NDTVFirstViewController_iPhone.xib */,
+				C666D1EC153B2FE800C339CE /* NDTVFirstViewController_iPad.xib */,
+				C666D1EF153B2FE800C339CE /* NDTVSecondViewController_iPhone.xib */,
+				C666D1F2153B2FE800C339CE /* NDTVSecondViewController_iPad.xib */,
+				C666D1D0153B2FE800C339CE /* Supporting Files */,
+			);
+			path = "Notre Dame Television";
+			sourceTree = "<group>";
+		};
+		C666D1D0153B2FE800C339CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C666D1D1153B2FE800C339CE /* Notre Dame Television-Info.plist */,
+				C666D1D2153B2FE800C339CE /* InfoPlist.strings */,
+				C666D1D5153B2FE800C339CE /* main.m */,
+				C666D1D7153B2FE800C339CE /* Notre Dame Television-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C666D201153B2FE800C339CE /* Notre Dame TelevisionTests */ = {
+			isa = PBXGroup;
+			children = (
+				C666D207153B2FE900C339CE /* Notre_Dame_TelevisionTests.h */,
+				C666D208153B2FE900C339CE /* Notre_Dame_TelevisionTests.m */,
+				C666D202153B2FE900C339CE /* Supporting Files */,
+			);
+			path = "Notre Dame TelevisionTests";
+			sourceTree = "<group>";
+		};
+		C666D202153B2FE900C339CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C666D203153B2FE900C339CE /* Notre Dame TelevisionTests-Info.plist */,
+				C666D204153B2FE900C339CE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C666D1C4153B2FE800C339CE /* Notre Dame Television */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C666D20C153B2FE900C339CE /* Build configuration list for PBXNativeTarget "Notre Dame Television" */;
+			buildPhases = (
+				C666D1C1153B2FE800C339CE /* Sources */,
+				C666D1C2153B2FE800C339CE /* Frameworks */,
+				C666D1C3153B2FE800C339CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Notre Dame Television";
+			productName = "Notre Dame Television";
+			productReference = C666D1C5153B2FE800C339CE /* Notre Dame Television.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C666D1F9153B2FE800C339CE /* Notre Dame TelevisionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C666D20F153B2FE900C339CE /* Build configuration list for PBXNativeTarget "Notre Dame TelevisionTests" */;
+			buildPhases = (
+				C666D1F5153B2FE800C339CE /* Sources */,
+				C666D1F6153B2FE800C339CE /* Frameworks */,
+				C666D1F7153B2FE800C339CE /* Resources */,
+				C666D1F8153B2FE800C339CE /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C666D200153B2FE800C339CE /* PBXTargetDependency */,
+			);
+			name = "Notre Dame TelevisionTests";
+			productName = "Notre Dame TelevisionTests";
+			productReference = C666D1FA153B2FE800C339CE /* Notre Dame TelevisionTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C666D1BC153B2FE800C339CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = C666D1BF153B2FE800C339CE /* Build configuration list for PBXProject "Notre Dame Television" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C666D1BA153B2FE800C339CE;
+			productRefGroup = C666D1C6153B2FE800C339CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C666D1C4153B2FE800C339CE /* Notre Dame Television */,
+				C666D1F9153B2FE800C339CE /* Notre Dame TelevisionTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C666D1C3153B2FE800C339CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C666D1D4153B2FE800C339CE /* InfoPlist.strings in Resources */,
+				C666D1DF153B2FE800C339CE /* first.png in Resources */,
+				C666D1E1153B2FE800C339CE /* first@2x.png in Resources */,
+				C666D1E6153B2FE800C339CE /* second.png in Resources */,
+				C666D1E8153B2FE800C339CE /* second@2x.png in Resources */,
+				C666D1EB153B2FE800C339CE /* NDTVFirstViewController_iPhone.xib in Resources */,
+				C666D1EE153B2FE800C339CE /* NDTVFirstViewController_iPad.xib in Resources */,
+				C666D1F1153B2FE800C339CE /* NDTVSecondViewController_iPhone.xib in Resources */,
+				C666D1F4153B2FE800C339CE /* NDTVSecondViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C666D1F7153B2FE800C339CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C666D206153B2FE900C339CE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C666D1F8153B2FE800C339CE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C666D1C1153B2FE800C339CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C666D1D6153B2FE800C339CE /* main.m in Sources */,
+				C666D1DA153B2FE800C339CE /* NDTVAppDelegate.m in Sources */,
+				C666D1DD153B2FE800C339CE /* NDTVFirstViewController.m in Sources */,
+				C666D1E4153B2FE800C339CE /* NDTVSecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C666D1F5153B2FE800C339CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C666D209153B2FE900C339CE /* Notre_Dame_TelevisionTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C666D200153B2FE800C339CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C666D1C4153B2FE800C339CE /* Notre Dame Television */;
+			targetProxy = C666D1FF153B2FE800C339CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C666D1D2153B2FE800C339CE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C666D1D3153B2FE800C339CE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C666D1E9153B2FE800C339CE /* NDTVFirstViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C666D1EA153B2FE800C339CE /* en */,
+			);
+			name = NDTVFirstViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		C666D1EC153B2FE800C339CE /* NDTVFirstViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C666D1ED153B2FE800C339CE /* en */,
+			);
+			name = NDTVFirstViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		C666D1EF153B2FE800C339CE /* NDTVSecondViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C666D1F0153B2FE800C339CE /* en */,
+			);
+			name = NDTVSecondViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		C666D1F2153B2FE800C339CE /* NDTVSecondViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C666D1F3153B2FE800C339CE /* en */,
+			);
+			name = NDTVSecondViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		C666D204153B2FE900C339CE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C666D205153B2FE900C339CE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C666D20A153B2FE900C339CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C666D20B153B2FE900C339CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C666D20D153B2FE900C339CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Notre Dame Television/Notre Dame Television-Prefix.pch";
+				INFOPLIST_FILE = "Notre Dame Television/Notre Dame Television-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C666D20E153B2FE900C339CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Notre Dame Television/Notre Dame Television-Prefix.pch";
+				INFOPLIST_FILE = "Notre Dame Television/Notre Dame Television-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C666D210153B2FE900C339CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Notre Dame Television.app/Notre Dame Television";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Notre Dame Television/Notre Dame Television-Prefix.pch";
+				INFOPLIST_FILE = "Notre Dame TelevisionTests/Notre Dame TelevisionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		C666D211153B2FE900C339CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Notre Dame Television.app/Notre Dame Television";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Notre Dame Television/Notre Dame Television-Prefix.pch";
+				INFOPLIST_FILE = "Notre Dame TelevisionTests/Notre Dame TelevisionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C666D1BF153B2FE800C339CE /* Build configuration list for PBXProject "Notre Dame Television" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C666D20A153B2FE900C339CE /* Debug */,
+				C666D20B153B2FE900C339CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C666D20C153B2FE900C339CE /* Build configuration list for PBXNativeTarget "Notre Dame Television" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C666D20D153B2FE900C339CE /* Debug */,
+				C666D20E153B2FE900C339CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C666D20F153B2FE900C339CE /* Build configuration list for PBXNativeTarget "Notre Dame TelevisionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C666D210153B2FE900C339CE /* Debug */,
+				C666D211153B2FE900C339CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C666D1BC153B2FE800C339CE /* Project object */;
+}
