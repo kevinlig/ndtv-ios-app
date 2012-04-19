@@ -8,9 +8,9 @@
 
 #import "NDTVAppDelegate.h"
 
-#import "NDTVFirstViewController.h"
+#import "NDTVScheduleView.h"
 
-#import "NDTVSecondViewController.h"
+#import "NDTVNotifyView.h"
 
 @implementation NDTVAppDelegate
 
@@ -23,11 +23,11 @@
     // Override point for customization after application launch.
     UIViewController *viewController1, *viewController2;
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        viewController1 = [[NDTVFirstViewController alloc] initWithNibName:@"NDTVFirstViewController_iPhone" bundle:nil];
-        viewController2 = [[NDTVSecondViewController alloc] initWithNibName:@"NDTVSecondViewController_iPhone" bundle:nil];
+        viewController1 = [[NDTVScheduleView alloc] initWithNibName:@"NDTVScheduleView_iPhone" bundle:nil];
+        viewController2 = [[NDTVNotifyView alloc] initWithNibName:@"NDTVNotifyView_iPhone" bundle:nil];
     } else {
-        viewController1 = [[NDTVFirstViewController alloc] initWithNibName:@"NDTVFirstViewController_iPad" bundle:nil];
-        viewController2 = [[NDTVSecondViewController alloc] initWithNibName:@"NDTVSecondViewController_iPad" bundle:nil];
+        viewController1 = [[NDTVScheduleView alloc] initWithNibName:@"NDTVScheduleView_iPad" bundle:nil];
+        viewController2 = [[NDTVNotifyView alloc] initWithNibName:@"NDTVNotifyView_iPad" bundle:nil];
     }
     self.tabBarController = [[UITabBarController alloc] init];
     self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
@@ -64,6 +64,7 @@
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"applicationActive" object:NULL];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
