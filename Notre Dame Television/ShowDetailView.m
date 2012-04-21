@@ -10,7 +10,7 @@
 
 @implementation ShowDetailView
 
-@synthesize titleBar, showName, broadcastTime, showLogo, showDetails, nowBadge, imageURL, downloadQueue;
+@synthesize titleBar, showName, broadcastTime, showLogo, showDetails, nowBadge, imageURL, downloadQueue, remindButton, remindTime, shortCode, airTime, reminderExists;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,6 +36,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     showDetails.backgroundColor = [UIColor clearColor];
+    reminderExists = 0;
 }
 
 - (void)viewDidUnload
@@ -44,6 +45,7 @@
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
+
 
 - (void)viewDidAppear:(BOOL)animated {
     // download the show logo
@@ -74,6 +76,69 @@
 #pragma mark - Methods
 - (IBAction)closeWindow:(id)sender {
     [self dismissModalViewControllerAnimated:YES];
+}
+- (IBAction)scheduleReminder:(id)sender {
+    if (reminderExists > 0) {
+        // cancel the reminder
+        for (UILocalNotification *reminder in [[UIApplication sharedApplication]scheduledLocalNotifications]) {
+            NSDictionary *reminderMeta = [reminder.userInfo valueForKey:@"metadata"];
+            if ([[reminderMeta objectForKey:@"timestamp"]intValue] == remindTime) {
+                // reminder is set to occur at this time
+                [[UIApplication sharedApplication]cancelLocalNotification:reminder];
+                break;
+            }
+        }
+    }
+    else {       
+        // create notification
+        UILocalNotification *showReminder = [[UILocalNotification alloc]init];
+        // set the reminder to occur 5 minutes before broadcast
+        showReminder.fireDate = [NSDate dateWithTimeIntervalSince1970:(remindTime-300)];
+        showReminder.timeZone = [NSTimeZone localTimeZone];
+        showReminder.alertAction = @"view schedule";
+        showReminder.alertBody = [NSString stringWithFormat:@"Reminder: %@ will air at %@ on Notre Dame Television - channel 53.", showName.text, airTime];
+        showReminder.soundName = UILocalNotificationDefaultSoundName;
+        // pass some metadata for later along
+        NSString *remindString = [NSString stringWithFormat:@"%i",remindTime];
+        NSMutableDictionary *metadata = [NSMutableDictionary dictionaryWithObject:remindString forKey:@"timestamp"];
+        [metadata setObject:shortCode forKey:@"shortCode"];
+        [metadata setObject:showName.text forKey:@"showName"];
+        showReminder.userInfo = [NSDictionary dictionaryWithObject:metadata forKey:@"metadata"];
+        
+        // schedule the reminder
+        [[UIApplication sharedApplication]scheduleLocalNotification:showReminder]; 
+    }
+    [self setUpRemindButton];
+}
+
+- (int)checkIfReminding:(int)timeStamp {
+    int found = 0;
+    // loop through all scheduled reminders
+    for (UILocalNotification *reminder in [[UIApplication sharedApplication]scheduledLocalNotifications]) {
+        NSDictionary *reminderMeta = [reminder.userInfo valueForKey:@"metadata"];
+        if ([[reminderMeta objectForKey:@"timestamp"]intValue] == timeStamp) {
+            // reminder is set to occur at this time
+            found = 1;
+            break;
+        }
+    }
+    return found;
+}
+
+- (void)setUpRemindButton {
+    // determine whether show set reminder or cancel reminder button
+    int reminderSet = [self checkIfReminding:remindTime];
+    if (reminderSet > 0) {
+        // reminder has been set
+        [remindButton setBackgroundImage:[UIImage imageNamed:@"cancel_remind"] forState:UIControlStateNormal];
+        [remindButton setTitle:@"Cancel" forState:UIControlStateNormal];
+    }
+    else {
+        // no reminder set
+        [remindButton setBackgroundImage:[UIImage imageNamed:@"remind"] forState:UIControlStateNormal];
+        [remindButton setTitle:@"Remind Me" forState:UIControlStateNormal];
+    }
+    reminderExists = reminderSet;
 }
 
 @end

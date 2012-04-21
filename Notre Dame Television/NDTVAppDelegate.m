@@ -22,17 +22,15 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     UIViewController *viewController1, *viewController2;
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        viewController1 = [[NDTVScheduleView alloc] initWithNibName:@"NDTVScheduleView_iPhone" bundle:nil];
-        viewController2 = [[NDTVNotifyView alloc] initWithNibName:@"NDTVNotifyView_iPhone" bundle:nil];
-    } else {
-        viewController1 = [[NDTVScheduleView alloc] initWithNibName:@"NDTVScheduleView_iPad" bundle:nil];
-        viewController2 = [[NDTVNotifyView alloc] initWithNibName:@"NDTVNotifyView_iPad" bundle:nil];
-    }
+    
+    viewController1 = [[NDTVScheduleView alloc] initWithNibName:@"NDTVScheduleView_iPhone" bundle:nil];
+    viewController2 = [[NDTVNotifyView alloc] initWithNibName:@"NDTVNotifyView_iPhone" bundle:nil];
+  
     self.tabBarController = [[UITabBarController alloc] init];
     self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -65,6 +63,15 @@
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
     [[NSNotificationCenter defaultCenter] postNotificationName:@"applicationActive" object:NULL];
+    // clear old NDtv user notifications
+    [[UIApplication sharedApplication]setApplicationIconBadgeNumber:1];
+    [[UIApplication sharedApplication]setApplicationIconBadgeNumber:0];
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    // clear the notification center by temporarily incrementing the badge number, then clearing it
+    [[UIApplication sharedApplication]setApplicationIconBadgeNumber:1];
+    [[UIApplication sharedApplication]setApplicationIconBadgeNumber:0];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

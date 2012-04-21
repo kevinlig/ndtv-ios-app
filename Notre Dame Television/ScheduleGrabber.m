@@ -10,7 +10,7 @@
 
 @implementation ScheduleGrabber
 
-@synthesize scheduleItems;
+@synthesize scheduleItems, lastUpdate;
 
 - (void)downloadSchedulefor:(NSInteger)dayID {
     // grab the JSON schedule data for the day provided
@@ -30,6 +30,7 @@
                 // received JSON
                 // set the scheduleItems array to the "data" array in the JSON
                 scheduleItems = [jsonReturn objectForKey:@"data"];
+                lastUpdate = [[jsonReturn objectForKey:@"time"]intValue];
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"parseCompleted" object:NULL];
                 // stop the network activity spinner
                 [[UIApplication sharedApplication]setNetworkActivityIndicatorVisible:NO];

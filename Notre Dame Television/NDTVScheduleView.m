@@ -16,6 +16,10 @@
 
 @synthesize HUD, errorInt, showingToday, loading, currentDay, firstLoad;
 
+@synthesize spinner, loadingLabel;
+
+@synthesize messageCenter, showMessage;
+
 @synthesize detailView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -48,6 +52,7 @@
     [self colorTodayButton];
     currentDay = [self returnDayNumber];
     firstLoad = 1;
+    showMessage = 0;
 
 }
 
@@ -83,24 +88,30 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return (interfaceOrientation == UIInterfaceOrientationPortrait);
-    }
-    
-    else {
-        return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft || interfaceOrientation == UIInterfaceOrientationLandscapeRight);
-    }
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 #pragma mark - Table Delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (loading == 1) {
+        // show loading spinner and label
+        spinner.hidden = FALSE;
+        [spinner startAnimating];
+        loadingLabel.hidden = FALSE;
         return 0;
     }
     else if (grabber.scheduleItems == nil) {
-        return 1;
+        // hide loading spinner and label
+        spinner.hidden = TRUE;
+        [spinner stopAnimating];
+        loadingLabel.hidden = TRUE;
+        return 0;
     }
     else {
+        // hide loading spinner and label
+        spinner.hidden = TRUE;
+        [spinner stopAnimating];
+        loadingLabel.hidden = TRUE;
         return [grabber.scheduleItems count];
     }
 }
@@ -194,6 +205,20 @@
         else {
             detailView.nowBadge.hidden = TRUE;
         }
+        // get the scheduled time in Unix timestamp form, for the appropriate day
+        int scheduleTime = [self alertTime:timeString];
+        // only show Remind button if event occurs in next 48 hours and is more than 1 minute from the show
+        if ((scheduleTime - [self currentTime]) > 300 && (scheduleTime - [self currentTime]) < 172800) {
+            // show Remind button
+            detailView.remindButton.hidden = FALSE;
+            detailView.remindTime = scheduleTime;
+            detailView.shortCode = [showInformation objectForKey:@"showid"];
+            detailView.airTime = timeString;
+        }
+        else {
+            detailView.remindButton.hidden = TRUE;
+        }
+        [detailView setUpRemindButton];
     }
 
 }
@@ -252,6 +277,9 @@
         [self scrollToNow];
     }
     else {
+        if (firstLoad == 1) {
+            showMessage = 1;
+        }
         firstLoad = 0;
         // show a blank screen while reloading occurs
         loading = 1;
@@ -384,6 +412,47 @@
     }
 }
 
+- (int)alertTime:(NSString *)inputTime {
+    int alertTime;
+    // calculate how many days away the scheduled item is
+    // current date code
+    int today = [self returnDayNumber];
+    int futureTimestamp;
+    if (today == currentDay) {
+        // showing an item on today's schedule
+        futureTimestamp = [self currentTime];
+    }
+    else if (today < currentDay) {
+        // showing a day in the future
+        // increase the current timestamp by 24 hours times the difference in days
+        futureTimestamp = [self currentTime] + (86400 * (currentDay - today));
+    }
+    else if (today > currentDay) {
+        // date exists earlier in the week than the current day
+        // this means it happens in the next week
+        // increment the scheduled date by 7 and then perform above process
+        futureTimestamp = [self currentTime] + (86400 * ((currentDay + 7) - today));
+    }
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    NSTimeZone *timeZone = [NSTimeZone localTimeZone];
+    [formatter setTimeZone:timeZone];
+    // display the date for the show
+    [formatter setDateFormat:@"MM/dd/yyyy"];
+    NSString *dayString = [formatter stringFromDate:[NSDate dateWithTimeIntervalSince1970:futureTimestamp]];
+    // let's append the time, from the schedule
+    NSString *completeString = [NSString stringWithFormat:@"%@ %@",dayString, inputTime];
+    // convert it back to a unix timestamp
+    [formatter setDateFormat:@"MM/dd/yyyy h:mm a"];
+    alertTime = (int)[[formatter dateFromString:completeString]timeIntervalSince1970];
+    return alertTime;
+}
+
+- (int)currentTime {
+    int currentTime = (int) [[NSDate date]timeIntervalSince1970];
+    return currentTime;
+}
+
 - (IBAction)selectDate:(id)sender {
     int counter = 0;
     NSArray *arrayButtons = [NSArray arrayWithObjects:sunButton, monButton, tuesButton, wedButton, thursButton, friButton, satButton, nil];
@@ -424,13 +493,33 @@
     }
 }
 
+- (void)displayUpdateMessage {
+    if (grabber != nil) {
+        MessageCenter *msgCtrNib = [[MessageCenter alloc]initWithNibName:@"MessageCenter" bundle:nil];
+        messageCenter = msgCtrNib;
+        // display the date the schedule was published
+        NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+        [formatter setDateFormat:@"MMMM dd, YYYY"];
+        [formatter setTimeZone:[NSTimeZone localTimeZone]];
+        NSString *updateString = [formatter stringFromDate:[NSDate dateWithTimeIntervalSince1970:grabber.lastUpdate]];
+        [self.view addSubview:messageCenter.view];
+        messageCenter.messageLabel.text = [NSString stringWithFormat:@"Schedule posted on %@.",updateString];
+        messageCenter.messageIcon.image = [UIImage imageNamed:@"updated"];
+    }
+}
+
 #pragma mark - Internal Notifications
 - (void)receivedUpdate:(NSNotification *)pNotification {
     loading = 0;
     [scheduleTable reloadData];
     [self scrollToNow];
+    if (showMessage == 1) {
+        [self displayUpdateMessage];
+        showMessage = 0;
+    }
 }
 - (void)becameActive:(NSNotification *)pNotification {
+    showMessage = 1;
     [self updateSchedule:[self returnDayNumber]];
     [self colorTodayButton];
 }
@@ -445,4 +534,5 @@
     [HUD hide:YES afterDelay:1];
     errorInt = 1;
 }
+
 @end

@@ -9,10 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @interface ScheduleGrabber : NSObject {
-    NSArray *scheduleItems;    
+    NSArray *scheduleItems;
+    int lastUpdate;
 }
 
 @property (retain, nonatomic) NSArray *scheduleItems;
+@property int lastUpdate;
 
 - (void)downloadSchedulefor:(NSInteger)dayID;
 
