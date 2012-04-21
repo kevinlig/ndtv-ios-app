@@ -22,6 +22,22 @@
 		C64F17A0153E76CC0061491C /* ShowDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C64F179E153E76CC0061491C /* ShowDetailView.xib */; };
 		C64F17A3153E77E60061491C /* divider.png in Resources */ = {isa = PBXBuildFile; fileRef = C64F17A1153E77E60061491C /* divider.png */; };
 		C64F17A6153E78470061491C /* divider@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C64F17A5153E78470061491C /* divider@2x.png */; };
+		C656917C15427EA500BB1ED3 /* remind_cell_back.png in Resources */ = {isa = PBXBuildFile; fileRef = C656917A15427EA500BB1ED3 /* remind_cell_back.png */; };
+		C656917D15427EA500BB1ED3 /* remind_cell_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C656917B15427EA500BB1ED3 /* remind_cell_back@2x.png */; };
+		C6569181154283AF00BB1ED3 /* remind_header.png in Resources */ = {isa = PBXBuildFile; fileRef = C656917F154283AF00BB1ED3 /* remind_header.png */; };
+		C6569182154283AF00BB1ED3 /* remind_header@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6569180154283AF00BB1ED3 /* remind_header@2x.png */; };
+		C65691851542850900BB1ED3 /* note.png in Resources */ = {isa = PBXBuildFile; fileRef = C65691831542850900BB1ED3 /* note.png */; };
+		C65691861542850900BB1ED3 /* note@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C65691841542850900BB1ED3 /* note@2x.png */; };
+		C65FFFE215425D5F00448FCC /* MessageCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = C65FFFE015425D5F00448FCC /* MessageCenter.m */; };
+		C65FFFE315425D5F00448FCC /* MessageCenter.xib in Resources */ = {isa = PBXBuildFile; fileRef = C65FFFE115425D5F00448FCC /* MessageCenter.xib */; };
+		C65FFFED1542620000448FCC /* message_background.png in Resources */ = {isa = PBXBuildFile; fileRef = C65FFFEB1542620000448FCC /* message_background.png */; };
+		C65FFFEE1542620000448FCC /* message_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C65FFFEC1542620000448FCC /* message_background@2x.png */; };
+		C65FFFF515426BD100448FCC /* updated.png in Resources */ = {isa = PBXBuildFile; fileRef = C65FFFF315426BD100448FCC /* updated.png */; };
+		C65FFFF615426BD100448FCC /* updated@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C65FFFF415426BD100448FCC /* updated@2x.png */; };
+		C65FFFF9154271FB00448FCC /* ReminderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C65FFFF8154271FB00448FCC /* ReminderCell.m */; };
+		C65FFFFB1542722500448FCC /* ReminderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C65FFFFA1542722500448FCC /* ReminderCell.xib */; };
+		C65FFFFE1542763600448FCC /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = C65FFFFC1542763600448FCC /* delete.png */; };
+		C65FFFFF1542763600448FCC /* delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C65FFFFD1542763600448FCC /* delete@2x.png */; };
 		C666D1CA153B2FE800C339CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C666D1C9153B2FE800C339CE /* UIKit.framework */; };
 		C666D1CC153B2FE800C339CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C666D1CB153B2FE800C339CE /* Foundation.framework */; };
 		C666D1CE153B2FE800C339CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C666D1CD153B2FE800C339CE /* CoreGraphics.framework */; };
@@ -31,14 +47,17 @@
 		C666D1DD153B2FE800C339CE /* NDTVScheduleView.m in Sources */ = {isa = PBXBuildFile; fileRef = C666D1DC153B2FE800C339CE /* NDTVScheduleView.m */; };
 		C666D1E4153B2FE800C339CE /* NDTVNotifyView.m in Sources */ = {isa = PBXBuildFile; fileRef = C666D1E3153B2FE800C339CE /* NDTVNotifyView.m */; };
 		C666D1EB153B2FE800C339CE /* NDTVScheduleView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = C666D1E9153B2FE800C339CE /* NDTVScheduleView_iPhone.xib */; };
-		C666D1EE153B2FE800C339CE /* NDTVScheduleView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C666D1EC153B2FE800C339CE /* NDTVScheduleView_iPad.xib */; };
 		C666D1F1153B2FE800C339CE /* NDTVNotifyView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = C666D1EF153B2FE800C339CE /* NDTVNotifyView_iPhone.xib */; };
-		C666D1F4153B2FE800C339CE /* NDTVNotifyView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C666D1F2153B2FE800C339CE /* NDTVNotifyView_iPad.xib */; };
 		C666D1FC153B2FE800C339CE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C666D1FB153B2FE800C339CE /* SenTestingKit.framework */; };
 		C666D1FD153B2FE800C339CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C666D1C9153B2FE800C339CE /* UIKit.framework */; };
 		C666D1FE153B2FE800C339CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C666D1CB153B2FE800C339CE /* Foundation.framework */; };
 		C666D206153B2FE900C339CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C666D204153B2FE900C339CE /* InfoPlist.strings */; };
 		C666D209153B2FE900C339CE /* Notre_Dame_TelevisionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C666D208153B2FE900C339CE /* Notre_Dame_TelevisionTests.m */; };
+		C69893721540F598009FB9C4 /* remind.png in Resources */ = {isa = PBXBuildFile; fileRef = C69893701540F598009FB9C4 /* remind.png */; };
+		C69893731540F598009FB9C4 /* remind@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C69893711540F598009FB9C4 /* remind@2x.png */; };
+		C698937915410ECA009FB9C4 /* cancel_remind.png in Resources */ = {isa = PBXBuildFile; fileRef = C698937715410ECA009FB9C4 /* cancel_remind.png */; };
+		C698937A15410ECA009FB9C4 /* cancel_remind@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C698937815410ECA009FB9C4 /* cancel_remind@2x.png */; };
+		C69D8A21154324B800F5F801 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C69D8A20154324B800F5F801 /* .gitignore */; };
 		C6A756B0153C6AD60069D02B /* now.png in Resources */ = {isa = PBXBuildFile; fileRef = C6A756AE153C6AD60069D02B /* now.png */; };
 		C6A756B1153C6AD60069D02B /* now@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6A756AF153C6AD60069D02B /* now@2x.png */; };
 		C6A756B5153C792A0069D02B /* masthead.png in Resources */ = {isa = PBXBuildFile; fileRef = C6A756B3153C792A0069D02B /* masthead.png */; };
@@ -48,7 +67,6 @@
 		C6EBDE12153B541500896A75 /* ScheduleGrabber.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EBDE11153B541500896A75 /* ScheduleGrabber.m */; };
 		C6EC341A153B365300B05E64 /* ScheduleTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EC3419153B365300B05E64 /* ScheduleTableCell.m */; };
 		C6EC341C153B367C00B05E64 /* ScheduleTableCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6EC341B153B367C00B05E64 /* ScheduleTableCell_iPhone.xib */; };
-		C6EC341E153B368F00B05E64 /* ScheduleTableCell_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6EC341D153B368F00B05E64 /* ScheduleTableCell_iPad.xib */; };
 		C6EC3434153B441B00B05E64 /* cell_background_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = C6EC3432153B441B00B05E64 /* cell_background_iphone.png */; };
 		C6EC3435153B441B00B05E64 /* cell_background_iphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6EC3433153B441B00B05E64 /* cell_background_iphone@2x.png */; };
 		C6EC3438153B449A00B05E64 /* sched_table_back_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = C6EC3436153B449A00B05E64 /* sched_table_back_iphone.png */; };
@@ -92,6 +110,24 @@
 		C64F179E153E76CC0061491C /* ShowDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowDetailView.xib; sourceTree = "<group>"; };
 		C64F17A1153E77E60061491C /* divider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = divider.png; sourceTree = "<group>"; };
 		C64F17A5153E78470061491C /* divider@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "divider@2x.png"; sourceTree = "<group>"; };
+		C656917A15427EA500BB1ED3 /* remind_cell_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = remind_cell_back.png; sourceTree = "<group>"; };
+		C656917B15427EA500BB1ED3 /* remind_cell_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "remind_cell_back@2x.png"; sourceTree = "<group>"; };
+		C656917F154283AF00BB1ED3 /* remind_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = remind_header.png; sourceTree = "<group>"; };
+		C6569180154283AF00BB1ED3 /* remind_header@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "remind_header@2x.png"; sourceTree = "<group>"; };
+		C65691831542850900BB1ED3 /* note.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = note.png; sourceTree = "<group>"; };
+		C65691841542850900BB1ED3 /* note@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "note@2x.png"; sourceTree = "<group>"; };
+		C65FFFDF15425D5F00448FCC /* MessageCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCenter.h; sourceTree = "<group>"; };
+		C65FFFE015425D5F00448FCC /* MessageCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCenter.m; sourceTree = "<group>"; };
+		C65FFFE115425D5F00448FCC /* MessageCenter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCenter.xib; sourceTree = "<group>"; };
+		C65FFFEB1542620000448FCC /* message_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = message_background.png; sourceTree = "<group>"; };
+		C65FFFEC1542620000448FCC /* message_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "message_background@2x.png"; sourceTree = "<group>"; };
+		C65FFFF315426BD100448FCC /* updated.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = updated.png; sourceTree = "<group>"; };
+		C65FFFF415426BD100448FCC /* updated@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "updated@2x.png"; sourceTree = "<group>"; };
+		C65FFFF7154271FB00448FCC /* ReminderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderCell.h; sourceTree = "<group>"; };
+		C65FFFF8154271FB00448FCC /* ReminderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderCell.m; sourceTree = "<group>"; };
+		C65FFFFA1542722500448FCC /* ReminderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReminderCell.xib; sourceTree = "<group>"; };
+		C65FFFFC1542763600448FCC /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
+		C65FFFFD1542763600448FCC /* delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete@2x.png"; sourceTree = "<group>"; };
 		C666D1C5153B2FE800C339CE /* NDtv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NDtv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C666D1C9153B2FE800C339CE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C666D1CB153B2FE800C339CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -107,15 +143,18 @@
 		C666D1E2153B2FE800C339CE /* NDTVNotifyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDTVNotifyView.h; sourceTree = "<group>"; };
 		C666D1E3153B2FE800C339CE /* NDTVNotifyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDTVNotifyView.m; sourceTree = "<group>"; };
 		C666D1EA153B2FE800C339CE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NDTVScheduleView_iPhone.xib; sourceTree = "<group>"; };
-		C666D1ED153B2FE800C339CE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NDTVScheduleView_iPad.xib; sourceTree = "<group>"; };
 		C666D1F0153B2FE800C339CE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NDTVNotifyView_iPhone.xib; sourceTree = "<group>"; };
-		C666D1F3153B2FE800C339CE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NDTVNotifyView_iPad.xib; sourceTree = "<group>"; };
 		C666D1FA153B2FE800C339CE /* Notre Dame TelevisionTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Notre Dame TelevisionTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C666D1FB153B2FE800C339CE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C666D203153B2FE900C339CE /* Notre Dame TelevisionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Notre Dame TelevisionTests-Info.plist"; sourceTree = "<group>"; };
 		C666D205153B2FE900C339CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C666D207153B2FE900C339CE /* Notre_Dame_TelevisionTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Notre_Dame_TelevisionTests.h; sourceTree = "<group>"; };
 		C666D208153B2FE900C339CE /* Notre_Dame_TelevisionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Notre_Dame_TelevisionTests.m; sourceTree = "<group>"; };
+		C69893701540F598009FB9C4 /* remind.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = remind.png; sourceTree = "<group>"; };
+		C69893711540F598009FB9C4 /* remind@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "remind@2x.png"; sourceTree = "<group>"; };
+		C698937715410ECA009FB9C4 /* cancel_remind.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel_remind.png; sourceTree = "<group>"; };
+		C698937815410ECA009FB9C4 /* cancel_remind@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel_remind@2x.png"; sourceTree = "<group>"; };
+		C69D8A20154324B800F5F801 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		C6A756AE153C6AD60069D02B /* now.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = now.png; sourceTree = "<group>"; };
 		C6A756AF153C6AD60069D02B /* now@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "now@2x.png"; sourceTree = "<group>"; };
 		C6A756B3153C792A0069D02B /* masthead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = masthead.png; sourceTree = "<group>"; };
@@ -127,7 +166,6 @@
 		C6EC3418153B365300B05E64 /* ScheduleTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleTableCell.h; sourceTree = "<group>"; };
 		C6EC3419153B365300B05E64 /* ScheduleTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleTableCell.m; sourceTree = "<group>"; };
 		C6EC341B153B367C00B05E64 /* ScheduleTableCell_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleTableCell_iPhone.xib; sourceTree = "<group>"; };
-		C6EC341D153B368F00B05E64 /* ScheduleTableCell_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleTableCell_iPad.xib; sourceTree = "<group>"; };
 		C6EC3432153B441B00B05E64 /* cell_background_iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_background_iphone.png; sourceTree = "<group>"; };
 		C6EC3433153B441B00B05E64 /* cell_background_iphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_background_iphone@2x.png"; sourceTree = "<group>"; };
 		C6EC3436153B449A00B05E64 /* sched_table_back_iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sched_table_back_iphone.png; sourceTree = "<group>"; };
@@ -175,9 +213,29 @@
 			name = "HUD Class";
 			sourceTree = "<group>";
 		};
+		C65FFFE51542605E00448FCC /* Message Center */ = {
+			isa = PBXGroup;
+			children = (
+				C65FFFDF15425D5F00448FCC /* MessageCenter.h */,
+				C65FFFE015425D5F00448FCC /* MessageCenter.m */,
+				C65FFFE115425D5F00448FCC /* MessageCenter.xib */,
+			);
+			name = "Message Center";
+			sourceTree = "<group>";
+		};
+		C65FFFE61542615500448FCC /* Message Center */ = {
+			isa = PBXGroup;
+			children = (
+				C65FFFEB1542620000448FCC /* message_background.png */,
+				C65FFFEC1542620000448FCC /* message_background@2x.png */,
+			);
+			name = "Message Center";
+			sourceTree = "<group>";
+		};
 		C666D1BA153B2FE800C339CE = {
 			isa = PBXGroup;
 			children = (
+				C69D8A20154324B800F5F801 /* .gitignore */,
 				C666D1CF153B2FE800C339CE /* Notre Dame Television */,
 				C666D201153B2FE800C339CE /* Notre Dame TelevisionTests */,
 				C666D1C8153B2FE800C339CE /* Frameworks */,
@@ -208,6 +266,7 @@
 		C666D1CF153B2FE800C339CE /* Notre Dame Television */ = {
 			isa = PBXGroup;
 			children = (
+				C65FFFE51542605E00448FCC /* Message Center */,
 				C64F1765153E50400061491C /* HUD Class */,
 				C6EC3431153B3FF600B05E64 /* Model Classes */,
 				C6EC3414153B35D000B05E64 /* Table Classes */,
@@ -217,14 +276,12 @@
 				C666D1DB153B2FE800C339CE /* NDTVScheduleView.h */,
 				C666D1DC153B2FE800C339CE /* NDTVScheduleView.m */,
 				C666D1E9153B2FE800C339CE /* NDTVScheduleView_iPhone.xib */,
-				C666D1EC153B2FE800C339CE /* NDTVScheduleView_iPad.xib */,
 				C64F179C153E76CC0061491C /* ShowDetailView.h */,
 				C64F179D153E76CC0061491C /* ShowDetailView.m */,
 				C64F179E153E76CC0061491C /* ShowDetailView.xib */,
 				C666D1E2153B2FE800C339CE /* NDTVNotifyView.h */,
 				C666D1E3153B2FE800C339CE /* NDTVNotifyView.m */,
 				C666D1EF153B2FE800C339CE /* NDTVNotifyView_iPhone.xib */,
-				C666D1F2153B2FE800C339CE /* NDTVNotifyView_iPad.xib */,
 				C666D1D0153B2FE800C339CE /* Supporting Files */,
 			);
 			path = "Notre Dame Television";
@@ -263,6 +320,12 @@
 		C6A756B7153C80DC0069D02B /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				C65FFFFC1542763600448FCC /* delete.png */,
+				C65FFFFD1542763600448FCC /* delete@2x.png */,
+				C69893701540F598009FB9C4 /* remind.png */,
+				C69893711540F598009FB9C4 /* remind@2x.png */,
+				C698937715410ECA009FB9C4 /* cancel_remind.png */,
+				C698937815410ECA009FB9C4 /* cancel_remind@2x.png */,
 				C64F178C153E6A9D0061491C /* button_sel.png */,
 				C64F178D153E6A9D0061491C /* button_sel@2x.png */,
 				C64F178E153E6A9D0061491C /* button_today_sel.png */,
@@ -281,7 +344,9 @@
 				C6EC3418153B365300B05E64 /* ScheduleTableCell.h */,
 				C6EC3419153B365300B05E64 /* ScheduleTableCell.m */,
 				C6EC341B153B367C00B05E64 /* ScheduleTableCell_iPhone.xib */,
-				C6EC341D153B368F00B05E64 /* ScheduleTableCell_iPad.xib */,
+				C65FFFF7154271FB00448FCC /* ReminderCell.h */,
+				C65FFFF8154271FB00448FCC /* ReminderCell.m */,
+				C65FFFFA1542722500448FCC /* ReminderCell.xib */,
 			);
 			name = "Table Classes";
 			sourceTree = "<group>";
@@ -289,6 +354,7 @@
 		C6EC341F153B3ADB00B05E64 /* Backgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				C65FFFE61542615500448FCC /* Message Center */,
 				C6EC3430153B3EEE00B05E64 /* Cell */,
 				C6EC3436153B449A00B05E64 /* sched_table_back_iphone.png */,
 				C6EC3437153B449A00B05E64 /* sched_table_back_iphone@2x.png */,
@@ -301,6 +367,8 @@
 			children = (
 				C6EC3432153B441B00B05E64 /* cell_background_iphone.png */,
 				C6EC3433153B441B00B05E64 /* cell_background_iphone@2x.png */,
+				C656917A15427EA500BB1ED3 /* remind_cell_back.png */,
+				C656917B15427EA500BB1ED3 /* remind_cell_back@2x.png */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -347,6 +415,12 @@
 				C6A756B4153C792A0069D02B /* masthead@2x.png */,
 				C6A756AE153C6AD60069D02B /* now.png */,
 				C6A756AF153C6AD60069D02B /* now@2x.png */,
+				C656917F154283AF00BB1ED3 /* remind_header.png */,
+				C6569180154283AF00BB1ED3 /* remind_header@2x.png */,
+				C65691831542850900BB1ED3 /* note.png */,
+				C65691841542850900BB1ED3 /* note@2x.png */,
+				C65FFFF315426BD100448FCC /* updated.png */,
+				C65FFFF415426BD100448FCC /* updated@2x.png */,
 				C6EC3445153B4F7F00B05E64 /* Default Logo */,
 				C6EC3444153B480F00B05E64 /* App Icons */,
 				C6EC341F153B3ADB00B05E64 /* Backgrounds */,
@@ -438,13 +512,10 @@
 			files = (
 				C666D1D4153B2FE800C339CE /* InfoPlist.strings in Resources */,
 				C666D1EB153B2FE800C339CE /* NDTVScheduleView_iPhone.xib in Resources */,
-				C666D1EE153B2FE800C339CE /* NDTVScheduleView_iPad.xib in Resources */,
 				C666D1F1153B2FE800C339CE /* NDTVNotifyView_iPhone.xib in Resources */,
-				C666D1F4153B2FE800C339CE /* NDTVNotifyView_iPad.xib in Resources */,
 				C6EFC9BB153B3172000F71E6 /* calendar.png in Resources */,
 				C6EFC9BC153B3172000F71E6 /* calendar@2x.png in Resources */,
 				C6EC341C153B367C00B05E64 /* ScheduleTableCell_iPhone.xib in Resources */,
-				C6EC341E153B368F00B05E64 /* ScheduleTableCell_iPad.xib in Resources */,
 				C6EC3434153B441B00B05E64 /* cell_background_iphone.png in Resources */,
 				C6EC3435153B441B00B05E64 /* cell_background_iphone@2x.png in Resources */,
 				C6EC3438153B449A00B05E64 /* sched_table_back_iphone.png in Resources */,
@@ -473,6 +544,25 @@
 				C64F17A6153E78470061491C /* divider@2x.png in Resources */,
 				C6E326CF153FCFE5001C4635 /* detail_generic_logo.png in Resources */,
 				C6E326D0153FCFE5001C4635 /* detail_generic_logo@2x.png in Resources */,
+				C69893721540F598009FB9C4 /* remind.png in Resources */,
+				C69893731540F598009FB9C4 /* remind@2x.png in Resources */,
+				C698937915410ECA009FB9C4 /* cancel_remind.png in Resources */,
+				C698937A15410ECA009FB9C4 /* cancel_remind@2x.png in Resources */,
+				C65FFFE315425D5F00448FCC /* MessageCenter.xib in Resources */,
+				C65FFFED1542620000448FCC /* message_background.png in Resources */,
+				C65FFFEE1542620000448FCC /* message_background@2x.png in Resources */,
+				C65FFFF515426BD100448FCC /* updated.png in Resources */,
+				C65FFFF615426BD100448FCC /* updated@2x.png in Resources */,
+				C65FFFFB1542722500448FCC /* ReminderCell.xib in Resources */,
+				C65FFFFE1542763600448FCC /* delete.png in Resources */,
+				C65FFFFF1542763600448FCC /* delete@2x.png in Resources */,
+				C656917C15427EA500BB1ED3 /* remind_cell_back.png in Resources */,
+				C656917D15427EA500BB1ED3 /* remind_cell_back@2x.png in Resources */,
+				C6569181154283AF00BB1ED3 /* remind_header.png in Resources */,
+				C6569182154283AF00BB1ED3 /* remind_header@2x.png in Resources */,
+				C65691851542850900BB1ED3 /* note.png in Resources */,
+				C65691861542850900BB1ED3 /* note@2x.png in Resources */,
+				C69D8A21154324B800F5F801 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +606,8 @@
 				C6045509153B8877004BAA1E /* ImageDownload.m in Sources */,
 				C64F1769153E50550061491C /* MBProgressHUD.m in Sources */,
 				C64F179F153E76CC0061491C /* ShowDetailView.m in Sources */,
+				C65FFFE215425D5F00448FCC /* MessageCenter.m in Sources */,
+				C65FFFF9154271FB00448FCC /* ReminderCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,28 +646,12 @@
 			name = NDTVScheduleView_iPhone.xib;
 			sourceTree = "<group>";
 		};
-		C666D1EC153B2FE800C339CE /* NDTVScheduleView_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C666D1ED153B2FE800C339CE /* en */,
-			);
-			name = NDTVScheduleView_iPad.xib;
-			sourceTree = "<group>";
-		};
 		C666D1EF153B2FE800C339CE /* NDTVNotifyView_iPhone.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C666D1F0153B2FE800C339CE /* en */,
 			);
 			name = NDTVNotifyView_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		C666D1F2153B2FE800C339CE /* NDTVNotifyView_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C666D1F3153B2FE800C339CE /* en */,
-			);
-			name = NDTVNotifyView_iPad.xib;
 			sourceTree = "<group>";
 		};
 		C666D204153B2FE900C339CE /* InfoPlist.strings */ = {
@@ -645,6 +721,7 @@
 				INFOPLIST_FILE = "Notre Dame Television/Notre Dame Television-Info.plist";
 				PRODUCT_NAME = NDtv;
 				PROVISIONING_PROFILE = "4B30C32C-BD9F-4401-ACD2-3BFAA6DF5D1B";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -658,6 +735,7 @@
 				INFOPLIST_FILE = "Notre Dame Television/Notre Dame Television-Info.plist";
 				PRODUCT_NAME = NDtv;
 				PROVISIONING_PROFILE = "4B30C32C-BD9F-4401-ACD2-3BFAA6DF5D1B";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
