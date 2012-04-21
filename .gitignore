@@ -3,5 +3,6 @@ Notre Dame TelevisionTests/*
  
 # Exclude files
 *.png
+Notre Dame Television/*.png
 .DS_Store
  
