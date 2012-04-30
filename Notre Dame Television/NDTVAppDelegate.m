@@ -72,6 +72,13 @@
     // clear the notification center by temporarily incrementing the badge number, then clearing it
     [[UIApplication sharedApplication]setApplicationIconBadgeNumber:1];
     [[UIApplication sharedApplication]setApplicationIconBadgeNumber:0];
+    
+    // check if the app is running
+    if ([application applicationState] == UIApplicationStateActive) {
+        // the app is running, so show an alert view
+        UIAlertView *reminderAlert = [[UIAlertView alloc]initWithTitle:@"Reminder" message:notification.alertBody delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+        [reminderAlert show];
+    }
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

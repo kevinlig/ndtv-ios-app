@@ -10,7 +10,7 @@
 
 @implementation NDTVNotifyView
 
-@synthesize remindTable, noReminders, messageCenter, showMessage;
+@synthesize remindTable, noReminders, messageCenter, showMessage, HUD, legalView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -157,6 +157,16 @@
     UILocalNotification *reminder = [[[UIApplication sharedApplication]scheduledLocalNotifications]objectAtIndex:row];
     [[UIApplication sharedApplication]cancelLocalNotification:reminder];
     
+    // display a HUD showing confirmation
+    HUD = [[MBProgressHUD alloc]initWithView:self.view];
+    [self.view addSubview:HUD];
+    HUD.customView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"hud_undo"]];
+    HUD.mode = MBProgressHUDModeCustomView;
+    HUD.delegate = self;
+    HUD.labelText = @"Reminder canceled.";
+    [HUD show:YES];
+    [HUD hide:YES afterDelay:1];
+    
     [remindTable reloadData];
 }
 
@@ -169,6 +179,13 @@
     messageCenter.messageIcon.image = [UIImage imageNamed:@"note"];
     messageCenter.messageIcon.frame = CGRectMake(15, 5, 26, 19);
     showMessage = 0;
+}
+
+#pragma mark - About/Legal button
+- (IBAction)showLegal:(id)sender {
+    LegalInfoView *legalViewNib = [[LegalInfoView alloc]initWithNibName:@"LegalInfoView" bundle:nil];
+    legalView = legalViewNib;
+    [self presentModalViewController:legalView animated:YES];
 }
 
 #pragma mark - Internal notifications

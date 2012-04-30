@@ -10,7 +10,7 @@
 
 @implementation ShowDetailView
 
-@synthesize titleBar, showName, broadcastTime, showLogo, showDetails, nowBadge, imageURL, downloadQueue, remindButton, remindTime, shortCode, airTime, reminderExists;
+@synthesize titleBar, showName, broadcastTime, showLogo, showDetails, nowBadge, imageURL, downloadQueue, remindButton, remindTime, shortCode, airTime, reminderExists, HUD;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -88,6 +88,15 @@
                 break;
             }
         }
+        // display a HUD showing confirmation
+        HUD = [[MBProgressHUD alloc]initWithView:self.view];
+        [self.view addSubview:HUD];
+        HUD.customView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"hud_undo"]];
+        HUD.mode = MBProgressHUDModeCustomView;
+        HUD.delegate = self;
+        HUD.labelText = @"Reminder canceled.";
+        [HUD show:YES];
+        [HUD hide:YES afterDelay:1];
     }
     else {       
         // create notification
@@ -107,6 +116,17 @@
         
         // schedule the reminder
         [[UIApplication sharedApplication]scheduleLocalNotification:showReminder]; 
+        
+        // display a HUD showing confirmation
+        HUD = [[MBProgressHUD alloc]initWithView:self.view];
+        [self.view addSubview:HUD];
+        HUD.customView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"hud_remind"]];
+        HUD.mode = MBProgressHUDModeCustomView;
+        HUD.delegate = self;
+        HUD.labelText = @"Reminder scheduled.";
+        HUD.detailsLabelText = @"You will receive a reminder five minutes before this show airs.";
+        [HUD show:YES];
+        [HUD hide:YES afterDelay:1.5];
     }
     [self setUpRemindButton];
 }

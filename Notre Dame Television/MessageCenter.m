@@ -72,11 +72,11 @@
 - (void)fadeOut {
     [UIView beginAnimations:@"Fade Out" context:nil];
     [UIView setAnimationDuration:1.5];
-    [UIView setAnimationDelay:5.0];
+    [UIView setAnimationDelay:2.0];
     self.view.alpha = 0;
     [UIView commitAnimations];
     // wait for animation, then schedule fade out
-    [NSTimer scheduledTimerWithTimeInterval:6.5 target:self selector:@selector(removeView) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:3.5 target:self selector:@selector(removeView) userInfo:nil repeats:NO];
 }
 
 - (void)removeView {

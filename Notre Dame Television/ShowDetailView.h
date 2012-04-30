@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "ImageDownload.h"
+#import "MBProgressHUD.h"
 
-@interface ShowDetailView : UIViewController <ImageDownloadDelegate> {
+@interface ShowDetailView : UIViewController <ImageDownloadDelegate, MBProgressHUDDelegate> {
     IBOutlet UINavigationBar *titleBar;
     IBOutlet UILabel *showName;
     IBOutlet UILabel *broadcastTime;
@@ -23,6 +24,8 @@
     int reminderExists;
     NSString *shortCode;
     NSString *airTime;
+    
+    MBProgressHUD *HUD;
     
 }
 
@@ -39,6 +42,7 @@
 @property int reminderExists;
 @property (retain, nonatomic) NSString *shortCode;
 @property (retain, nonatomic) NSString *airTime;
+@property (retain, nonatomic) MBProgressHUD *HUD;
 
 - (IBAction)closeWindow:(id)sender;
 - (IBAction)scheduleReminder:(id)sender;

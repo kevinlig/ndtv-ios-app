@@ -98,6 +98,10 @@
         spinner.hidden = FALSE;
         [spinner startAnimating];
         loadingLabel.hidden = FALSE;
+        loadingLabel.text = @"Loading...";
+        // position the label
+        loadingLabel.frame = CGRectMake(138, 218, 162, 21);
+        loadingLabel.textAlignment = UITextAlignmentLeft;
         return 0;
     }
     else if (grabber.scheduleItems == nil) {
@@ -249,6 +253,11 @@
             ScheduleTableCell *currentCell = (ScheduleTableCell *)[scheduleTable cellForRowAtIndexPath:indexPath];
             currentCell.nowBadge.hidden = FALSE;
         }
+        else {
+            ScheduleTableCell *currentCell = (ScheduleTableCell *)[scheduleTable cellForRowAtIndexPath:indexPath];
+            currentCell.nowBadge.hidden = TRUE;
+
+        }
     }
 }
 
@@ -364,11 +373,23 @@
             // see scroll view delegates for that
             nowIndex = currentItem;
             // make the "now" badge appear, just in case the current show is already in view
-            if (showingToday == 1) {
-                ScheduleTableCell *cell = (ScheduleTableCell *)[scheduleTable cellForRowAtIndexPath:currentItem];
-                cell.nowBadge.hidden = FALSE;
+            NSArray *itemsInView = [scheduleTable indexPathsForVisibleRows];
+            for (NSIndexPath *itemInView in itemsInView) {
+                if (showingToday == 1 && [itemInView row] == [currentItem row]) {
+                    ScheduleTableCell *cell = (ScheduleTableCell *)[scheduleTable cellForRowAtIndexPath:itemInView];
+                    cell.nowBadge.hidden = FALSE;
+                }
+                else {
+                    ScheduleTableCell *cell = (ScheduleTableCell *)[scheduleTable cellForRowAtIndexPath:itemInView];
+                    cell.nowBadge.hidden = TRUE;
+                }
             }
             
+            // display the Message Center
+            if (showMessage == 1) {
+                [self displayUpdateMessage];
+                showMessage = 0;
+            }
         }
     }
     else {
@@ -513,10 +534,6 @@
     loading = 0;
     [scheduleTable reloadData];
     [self scrollToNow];
-    if (showMessage == 1) {
-        [self displayUpdateMessage];
-        showMessage = 0;
-    }
 }
 - (void)becameActive:(NSNotification *)pNotification {
     showMessage = 1;
@@ -526,13 +543,23 @@
 - (void)showError:(NSNotification *)pNotification {
     HUD = [[MBProgressHUD alloc]initWithView:self.view];
     [self.view addSubview:HUD];
-    HUD.customView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"hud_X.png"]];
+    HUD.customView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"hud_X"]];
     HUD.mode = MBProgressHUDModeCustomView;
     HUD.delegate = self;
     HUD.labelText = @"An error has occurred.";
     [HUD show:YES];
     [HUD hide:YES afterDelay:1];
     errorInt = 1;
+    
+    [spinner stopAnimating];
+    spinner.hidden = TRUE;
+    loadingLabel.text = @"Could not load schedule.";
+    // center the label
+    loadingLabel.frame = CGRectMake(78, 218, 162, 21);
+    loadingLabel.textAlignment = UITextAlignmentCenter;
+    
+    // set up loading for next time
+    firstLoad = 1;
 }
 
 @end
